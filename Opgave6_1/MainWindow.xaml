@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Center" Height="46" VerticalAlignment="Center" Width="100" Click="Button_Click" Background="#FF0CC731"/>
-        <CheckBox x:Name="___hvisKnap_" Content="Vis knap" HorizontalAlignment="Left" Margin="350,275,0,0" VerticalAlignment="Top" IsChecked="{Binding Visibility.Hidden, ElementName=button}" Checked="___hvisKnap__Checked"/>
+        <Button x:Name="btn1" Content="Not clicked" HorizontalAlignment="Left" Margin="262,106,0,0" VerticalAlignment="Top" Height="108" Width="198" Click="btn1_Click" Background="#FF4DB612"/>
+        <CheckBox x:Name="cbox1" Content="Dig" HorizontalAlignment="Left" Margin="270,274,0,0" VerticalAlignment="Top" Checked="cbox1_Checked" Unchecked="cbox1_Unchecked"/>
 
     </Grid>
 </Window>

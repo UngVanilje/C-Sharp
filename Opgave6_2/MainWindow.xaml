@@ -7,22 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Button Grid.Column="1" Content="Button1&#xD;&#xA;" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="119" Click="Button_Click"/>
-        <Button Grid.Column="1" Content="Button2&#xA;" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="119" Click="Button_Click" Grid.Row="1"/>
-        <Label Content="Krølle" HorizontalAlignment="Center" VerticalAlignment="Center" Width="97"/>
-        <Button Grid.Column="1" Content="Button1&#xA;" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="119" Click="Button_Click"/>
-        <Label Content="Gewir" HorizontalAlignment="Center" VerticalAlignment="Center" Width="97" Grid.Row="1"/>
-        <Label Content="Bokki" HorizontalAlignment="Center" VerticalAlignment="Center" Width="97" Grid.Column="2"/>
-        <Label Content="Bill" HorizontalAlignment="Center" VerticalAlignment="Top" Width="97" Grid.Column="2" Margin="0,91,0,0" Grid.Row="1"/>
+        <Button x:Name="btn1" Grid.Column="1" Content="Switch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="70" Width="116" Click="btn1_Click"/>
+        <Button x:Name="btn2" Grid.Column="1" Content="Switch" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="70" Width="116" Click="btn2_Click"/>
+        <Label x:Name="lbl1" Content="Gehwir" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="lbl3" Content="Krølle" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
+        <Label x:Name="lbl2" Grid.Column="2" Content="Bokki" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="lbl4" Grid.Column="2" Content="Bill" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
 
     </Grid>
 </Window>

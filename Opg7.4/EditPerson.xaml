@@ -1,0 +1,23 @@
+﻿<Window x:Class="Opg7._4.EditPerson"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Opg7._4"
+        mc:Ignorable="d"
+        Title="EditPerson" Height="450" Width="800">
+    <Grid x:Name="editGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="131*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tb1" Text="{Binding Path=Name}"  HorizontalAlignment="Left" Height="35" Margin="140,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Grid.Column="1"/>
+        <TextBox x:Name="tb2" HorizontalAlignment="Left" Height="36" Margin="140,135,0,0" TextWrapping="Wrap" Text="{Binding Path=Age}" VerticalAlignment="Top" Width="143" Grid.Column="1"/>
+        <CheckBox x:Name="cb1" HorizontalAlignment="Left" Height="36" Margin="140,190,0,0" IsChecked="{Binding Path=Accepted}" VerticalAlignment="Top" Width="143" Grid.Column="1"/>
+        <Label Content="Name" HorizontalAlignment="Left" Height="33" Margin="46,97,0,0" VerticalAlignment="Top" Width="69" Grid.Column="1"/>
+        <Label Content="Age" HorizontalAlignment="Left" Height="36" Margin="46,135,0,0" VerticalAlignment="Top" Width="78" Grid.Column="1"/>
+        <Label Content="Accepted" HorizontalAlignment="Left" Height="36" Margin="46,181,0,0" VerticalAlignment="Top" Width="78" Grid.Column="1"/>
+        <Button x:Name="btnSave" Content="Gem" HorizontalAlignment="Left" Margin="186,269,0,0" VerticalAlignment="Top" Height="35" Width="97" Click="btnSave_Click" Grid.Column="1"/>
+        <Button x:Name="btnAnnuller" Content="Annuller" HorizontalAlignment="Left" Margin="46,269,0,0" VerticalAlignment="Top" Height="35" Width="97" Click="btnAnnuller_Click" Grid.Column="1"/>
+    </Grid>
+</Window>

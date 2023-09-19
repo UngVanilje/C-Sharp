@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Opgave6_1
+namespace _6._6
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,19 +25,29 @@ namespace Opgave6_1
             InitializeComponent();
         }
 
-        private void btn1_Click(object sender, RoutedEventArgs e)
+        private void btnbuttom_Click(object sender, RoutedEventArgs e)
         {
-            btn1.Content = "OK";
+            btncenter.Content += "\nButtom was here";
         }
 
-        private void cbox1_Checked(object sender, RoutedEventArgs e)
+        private void btncenter_Click(object sender, RoutedEventArgs e)
         {
-           btn1.Visibility = Visibility.Hidden;
+            btncenter.Content = "Center";
         }
 
-        private void cbox1_Unchecked(object sender, RoutedEventArgs e)
+        private void btntop_Click(object sender, RoutedEventArgs e)
         {
-            btn1.Visibility = Visibility.Visible;
+            btncenter.Content += "\nTop was here";
+        }
+
+        private void btnright_Click(object sender, RoutedEventArgs e)
+        {
+            btncenter.Content += "\nRight was here";
+        }
+
+        private void btnleft_Click(object sender, RoutedEventArgs e)
+        {
+            btncenter.Content += "\nLeft was here";
         }
     }
 }

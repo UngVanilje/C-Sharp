@@ -1,0 +1,16 @@
+﻿<Window x:Class="_6._6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_6._6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Button x:Name="btntop" DockPanel.Dock="Top" Height="50" Click="btntop_Click">Top</Button>
+        <Button x:Name="btnbuttom" DockPanel.Dock="Bottom" Height="50" Click="btnbuttom_Click">Bottom</Button>
+        <Button x:Name="btnleft" DockPanel.Dock="Left" Width="50" Click="btnleft_Click">Left</Button>
+        <Button x:Name="btnright" DockPanel.Dock="Right" Width="50" Click="btnright_Click">Right</Button>
+        <Button x:Name="btncenter" Click="btncenter_Click">Center</Button>
+    </DockPanel>
+</Window>
