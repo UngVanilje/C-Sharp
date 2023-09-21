@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 using Opgave8_1.Model;
-using Lektion8.Context;
 
 namespace Lektion8.Context
 {
@@ -16,7 +10,8 @@ namespace Lektion8.Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=BALDEAGLEBILL\\SQLEXPRESS; Initial Catalog=Bil; Integrated Security=SSPI; TrustServerCertificate=true");
+            //optionsBuilder.UseSqlServer("Data Source=BALDEAGLEBILL\\SQLEXPRESS; Initial Catalog=Bil; Integrated Security=SSPI; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Data Source=EMIL\\SQLEXPRESS; Initial Catalog=Bil; Integrated Security=SSPI; TrustServerCertificate=true");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

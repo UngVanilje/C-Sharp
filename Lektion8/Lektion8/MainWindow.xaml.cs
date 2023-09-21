@@ -1,19 +1,8 @@
 ﻿using Lektion8.Context;
+using Opgave8_1;
 using Opgave8_1.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Lektion8
 {
@@ -31,14 +20,14 @@ namespace Lektion8
             {
                 MessageBox.Show("Database created");
             }
-            foreach(Bil bil in context.Biler)
+            foreach (Bil bil in context.Biler)
             {
                 lbCarView.Items.Add(bil);
             }
-            foreach(Ejer ejer in context.Ejere)
+            foreach (Ejer ejer in context.Ejere)
             {
                 cbShowEJer.Items.Add(ejer);
-            } 
+            }
 
         }
 
@@ -46,10 +35,33 @@ namespace Lektion8
         {
             lbCarView.Items.Clear();
             Ejer ej = (Ejer)cbShowEJer.SelectedItem;
-            foreach(Bil bil in ej.Biler)
+            foreach (Bil bil in ej.Biler)
             {
                 lbCarView.Items.Add(bil);
             }
         }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            EditCarWindow editCar = new EditCarWindow();
+            editCar.Show();
+            RefreshData();
+        }
+
+        private void RefreshData()
+        {
+            lbCarView.Items.Clear();
+            cbShowEJer.Items.Clear();
+
+            foreach (Bil bil in context.Biler)
+            {
+                lbCarView.Items.Add(bil);
+            }
+            foreach (Ejer ejer in context.Ejere)
+            {
+                cbShowEJer.Items.Add(ejer);
+            }
+        }
     }
 }
+

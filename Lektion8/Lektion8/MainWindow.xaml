@@ -9,6 +9,7 @@
     <Grid>
         <ListBox x:Name="lbCarView" HorizontalAlignment="Left" Height="259" Margin="32,44,0,0" VerticalAlignment="Top" Width="263" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <ComboBox x:Name="cbShowEJer" HorizontalAlignment="Left" Margin="338,45,0,0" VerticalAlignment="Top" Width="176" SelectionChanged="cbShowEJer_SelectionChanged"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="32,344,0,0" VerticalAlignment="Top" Height="45" Width="123" Click="btnEdit_Click"/>
 
     </Grid>
 </Window>
