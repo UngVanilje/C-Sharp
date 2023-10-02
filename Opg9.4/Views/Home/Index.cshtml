@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Time ";
+
+}
+
+<body>
+    <div class="text-center">
+        <h1>Time calulator</h1>
+    </div>
+
+    @using (Html.BeginForm("TimeCalculator", "Home"))
+    {
+        <p>
+            @Html.Label("Hours") <br />
+            @Html.TextBox("Hours")
+        </p>
+        <p>
+            @Html.Label("Minutes") <br />
+            @Html.TextBox("Minutes")
+        </p>
+        <p>
+            @Html.Label("Seconds") <br />
+            @Html.TextBox("Seconds")
+        </p>
+        <p>
+            <input type="submit" value="Calculate" />
+        </p>
+        if (ViewBag.TotalSeconds != null)
+        {
+            <p>
+                @ViewBag.Hours hours, @ViewBag.Minutes minutes and @ViewBag.Seconds seconds is @ViewBag.TotalSeconds seconds.
+            </p>
+        }
+    }
+
+</body>

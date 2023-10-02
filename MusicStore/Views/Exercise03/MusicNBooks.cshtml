@@ -1,0 +1,35 @@
+﻿@{
+    var book = ViewBag.Book as MusicStore.Models.Book;
+    var cd = ViewBag.CD as MusicStore.Models.MusicCD;
+}
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="flex-basis: 45%; padding: 10px; border: 1px solid #ccc; margin: 5px;">
+        <h2>@book.Name</h2>
+        <p><strong>Author:</strong> @book.Author</p>
+        <p><strong>Publisher:</strong> @book.Publisher</p>
+        <p><strong>Published:</strong> @book.Published</p>
+        <p><strong>ISBN:</strong> @book.ISBN</p>
+        <p><strong>Price:</strong> $@book.Price</p>
+        <img src="@book.ImageUrl" alt="Book Image" />
+    </div>
+
+    <div style="flex-basis: 45%; text-align: center;">
+        <h2>@cd.Name</h2>
+        <p><strong>Artist:</strong> @cd.Artist</p>
+        <p><strong>Label:</strong> @cd.Label</p>
+        <p><strong>Released:</strong> @cd.Released</p>
+        <p><strong>Price:</strong> $@cd.Price</p>
+        <img src="@cd.ImageUrl" alt="CD Image" />
+    </div>
+
+    <div style="flex-basis: 45%;">
+        <h3>Tracks</h3>
+        <ol style="list-style-type: decimal; padding-left: 20px;">
+            @for (int i = cd.Tracks.Count - 1; i >= 0; i--)
+            {
+                <li>@(cd.Tracks.Count - i). @cd.Tracks[i]</li>
+            }
+        </ol>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+
+<h1>Simple Calculator</h1>
+
+<body>
+    @using (Html.BeginForm("CalculatorView", "SimpleCalculator", FormMethod.Post))
+    {
+        <p>
+            @Html.Label("Value 1") <br />
+            @Html.TextBox("FirstNumber", (string)ViewBag.FirstNumber)
+        </p>
+        <p>
+            @Html.Label("Value 2") <br />
+            @Html.TextBox("SecondNumber", (string)ViewBag.SecondNumber)
+        </p>
+        <p>
+            @Html.Label("Operator") <br />
+            @Html.TextBox("Operator", (string)ViewBag.Operator)
+        </p>
+
+        <p>
+            <input type="submit" value="Calculate" />
+        </p>
+        @if (!string.IsNullOrEmpty(ViewBag.Result))
+        {
+            <p>
+                @Html.Label("Result") <br />
+                @ViewBag.Result
+            </p>
+        }
+        @if (!string.IsNullOrEmpty(ViewBag.Error))
+        {
+            <p style="color: red;">
+                @ViewBag.Error
+            </p>
+        }
+    }
+</body>
